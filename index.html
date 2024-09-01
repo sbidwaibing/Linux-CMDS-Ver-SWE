@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Commands Version SDE1</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: #ddeeff;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            color: #004080;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-top: 30px;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+
+        p, ul {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        a {
+            color: #004080;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        code {
+            background-color: #e6f2ff;
+            padding: 2px 5px;
+            border-radius: 4px;
+            color: #004080;
+            font-weight: bold;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #004080;
+            margin: 40px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1><p align="center">💻 Linux Commands Version SDE1 🛠️</p></h1>
+    <h2><p align="center">A file containing a comprehensive list of Linux commands used in Software Engineering, including their usage and examples</p></h2>
+
+    <hr>
+    <p><strong>Appreciation:</strong> <br>Special thanks to <strong>Linus Torvalds</strong>, the founder of Linux, for his incredible contribution to the 🌏 of open-source software.</p>
+
+    <hr>
+
+    <h2>Index</h2>
+    <ol>
+        <li><a href="#file-management">File and Directory Management</a></li>
+        <li><a href="#file-viewing">File Viewing and Editing</a></li>
+        <li><a href="#file-permissions">File Permissions</a></li>
+        <li><a href="#system-information">System Information</a></li>
+        <li><a href="#networking">Networking</a></li>
+        <li><a href="#process-management">Process Management</a></li>
+        <li><a href="#package-management">Package Management</a></li>
+        <li><a href="#git-commands">Git Commands</a></li>
+        <li><a href="#miscellaneous">Miscellaneous</a></li>
+    </ol>
+
+    <hr>
+
+    <h2 id="file-management">File and Directory Management</h2>
+
+    <h3>`ls`</h3>
+    <ul>
+        <li><strong>Use</strong>: List directory contents.</li>
+        <li><strong>Example</strong>: <code>ls -l</code> (List files with details)</li>
+    </ul>
+
+    <h3>`cd`</h3>
+    <ul>
+        <li><strong>Use</strong>: Change directory.</li>
+        <li><strong>Example</strong>: <code>cd /path/to/directory</code></li>
+    </ul>
+
+    <h3>`pwd`</h3>
+    <ul>
+        <li><strong>Use</strong>: Print working directory.</li>
+        <li><strong>Example</strong>: <code>pwd</code> (Displays the current directory path)</li>
+    </ul>
+
+    <h3>`cp`</h3>
+    <ul>
+        <li><strong>Use</strong>: Copy files or directories.</li>
+        <li><strong>Example</strong>: <code>cp source.txt destination.txt</code> (Copy a file)</li>
+    </ul>
+
+    <h3>`mv`</h3>
+    <ul>
+        <li><strong>Use</strong>: Move or rename files or directories.</li>
+        <li><strong>Example</strong>: <code>mv oldname.txt newname.txt</code> (Rename a file)</li>
+    </ul>
+
+    <h3>`rm`</h3>
+    <ul>
+        <li><strong>Use</strong>: Remove files or directories.</li>
+        <li><strong>Example</strong>: <code>rm file.txt</code> (Delete a file)</li>
+    </ul>
+
+    <h3>`mkdir`</h3>
+    <ul>
+        <li><strong>Use</strong>: Create directories.</li>
+        <li><strong>Example</strong>: <code>mkdir new_directory</code> (Create a new directory)</li>
+    </ul>
+
+    <h3>`rmdir`</h3>
+    <ul>
+        <li><strong>Use</strong>: Remove empty directories.</li>
+        <li><strong>Example</strong>: <code>rmdir empty_directory</code></li>
+    </ul>
+
+    <h3>`find`</h3>
+    <ul>
+        <li><strong>Use</strong>: Search for files in a directory hierarchy.</li>
+        <li><strong>Example</strong>: <code>find /path -name filename.txt</code> (Find a file named <code>filename.txt</code>)</li>
+    </ul>
+
+    <h3>`touch`</h3>
+    <ul>
+        <li><strong>Use</strong>: Create an empty file or update the timestamp of an existing file.</li>
+        <li><strong>Example</strong>: <code>touch newfile.txt</code></li>
+    </ul>
+
+    <hr>
+
+    <h2 id="file-viewing">File Viewing and Editing</h2>
+
+    <h3>`cat`</h3>
+    <ul>
+        <li><strong>Use</strong>: Concatenate and display file content.</li>
+        <li><strong>Example</strong>: <code>cat file.txt</code></li>
+    </ul>
+
+    <h3>`less`</h3>
+    <ul>
+        <li><strong>Use</strong>: View file content interactively.</li>
+        <li><strong>Example</strong>: <code>less file.txt</code></li>
+    </ul>
+
+    <h3>`more`</h3>
+    <ul>
+        <li><strong>Use</strong>: View file content with pagination.</li>
+        <li><strong>Example</strong>: <code>more file.txt</code></li>
+    </ul>
+
+    <h3>`head`</h3>
+    <ul>
+        <li><strong>Use</strong>: Display the beginning of a file.</li>
+        <li><strong>Example</strong>: <code>head -n 10 file.txt</code> (Show the first 10 lines)</li>
+    </ul>
+
+    <h3>`tail`</h3>
+    <ul>
+        <li><strong>Use</strong>: Display the end of a file.</li>
+        <li><strong>Example</strong>: <code>tail -n 10 file.txt</code> (Show the last 10 lines)</li>
+    </ul>
+
+    <h3>`nano`</h3>
+    <ul>
+        <li><strong>Use</strong>: Simple text editor.</li>
+        <li><strong>Example</strong>: <code>nano file.txt</code></li>
+    </ul>
+
+    <h3>`vim`</h3>
+    <ul>
+        <li><strong>Use</strong>: Advanced text editor.</li>
+        <li><strong>Example</strong>: <code>vim file.txt</code></li>
+    </ul>
+
+    <hr>
+
+    <h2 id="file-permissions">File Permissions</h2>
+
+    <h3>`chmod`</h3>
+    <ul>
+        <li><strong>Use</strong>: Change file permissions.</li>
+        <li><strong>Example</strong>: <code>chmod 755 script.sh</code> (Set read, write, and execute permissions for owner, read and execute for others)</li>
+    </ul>
+
+    <h3>`chown`</h3>
+    <ul>
+        <li><strong>Use</strong>: Change file owner and group.</li>
+        <li><strong>Example</strong>: <code>chown user:group file.txt</code></li>
+    </ul>
+
+    <h3>`chgrp`</h3>
+    <ul>
+        <li><strong>Use</strong>: Change group ownership of a file.</li>
+        <li><strong>Example</strong>: <code>chgrp group file.txt</code></li>
+    </ul>
+
+    <hr>
+
+    <h2 id="system-information">System Information</h2>
+
+    <h3>`top`</h3>
+    <ul>
+        <li><strong>Use</strong>: Display system processes.</li>
+        <li><strong>Example</strong>: <code>top</code></li>
+    </ul>
+
+    <h3>`htop`</h3>
+    <ul>
+        <li><strong>Use</strong>: Interactive process viewer (requires installation).</li>
+        <li><strong>Example</strong>: <code>htop</code></li>
+    </ul>
+
+    <h3>`df`</h3>
+    <ul>
+        <li><strong>Use</strong>: Display disk space usage.</li>
+        <li><strong>Example</strong>: <code>df -h</code> (Show disk usage in human-readable format)</li>
+    </ul>
+
+    <h3>`du`</h3>
+    <ul>
+        <li><strong>Use</strong>: Display disk usage of files and directories.</li>
+        <li><strong>Example</strong>: <code>du -sh *</code> (Show the size of each file and directory in the current directory)</li>
+    </ul>
+
+    <h3>`free`</h3>
+    <ul>
+        <li><strong>Use</strong>: Display memory usage.</li>
+        <li><strong>Example</strong>: <code>free -h</code> (Show memory usage in human-readable format)</li>
+    </ul>
+
+    <h3>`uname`</h3>
+    <ul>
+        <li><strong>Use</strong>: Display system information.</li>
+        <li><strong>Example</strong>: <code>uname -a</code> (Show all system information)</li>
+    </ul>
+
+    <hr>
+
+    <h2 id="networking">Networking</h2>
+
+    <h3>`ping`</h3>
+    <ul>
+        <li><strong>Use</strong>: Test network connectivity.</li>
+        <li><strong>Example</strong>: <code>ping google.com</code></li>
+    </ul>
+
+    <h3>`ifconfig`</h3>
+    <ul>
+        <li><strong>Use</strong>: Configure network interfaces (deprecated in favor of <code>ip</code>).</li>
+        <li><strong>Example</strong>: <code>ifconfig</code></li>
+    </ul>
+
+    <h3>`ip`</h3>
+    <ul>
+        <li><strong>Use</strong>: Show/manipulate routing, devices, policy routing, and tunnels.</li>
+        <li><strong>Example</strong>: <code>ip addr show</code> (Display IP addresses)</li>
+    </ul>
+
+    <h3>`netstat`</h3>
+    <ul>
+        <li><strong>Use</strong>: Network statistics (deprecated in favor of <code>ss</code>).</li>
+        <li><strong>Example</strong>: <code>netstat -tuln</code> (Show listening ports)</li>
+    </ul>
+
+    <h3>`ss`</h3>
+    <ul>
+        <li><strong>Use</strong>: Another utility to investigate sockets.</li>
+        <li><strong>Example</strong>: <code>ss -tuln</code> (Show listening sockets)</li>
+    </ul>
+
+    <h3>`traceroute`</h3>
+    <ul>
+        <li><strong>Use</strong>: Show the route that packets take to a network host.</li>
+        <li><strong>Example</strong>: <code>traceroute google.com</code></li>
+    </ul>
+
+    <h3>`wget`</h3>
+    <ul>
+        <li><strong>Use</strong>: Download files from the web.</li>
+        <li><strong>Example</strong>: <code>wget http://example.com/file.zip</code></li>
+    </ul>
+
+    <hr>
+
+    <h2 id="process-management">Process Management</h2>
+
+    <h3>`ps`</h3>
+    <ul>
+        <li><strong>Use</strong>: Report a snapshot of current processes.</li>
+        <li><strong>Example</strong>: <code>ps aux</code></li>
+    </ul>
+
+    <h3>`kill`</h3>
+    <ul>
+        <li><strong>Use</strong>: Terminate processes.</li>
+        <li><strong>Example</strong>: <code>kill -9 1234</code> (Forcefully terminate the process with PID 1234)</li>
+    </ul>
+
+    <h3>`pkill`</h3>
+    <ul>
+        <li><strong>Use</strong>: Terminate processes by name.</li>
+        <li><strong>Example</strong>: <code>pkill firefox</code></li>
+    </ul>
+
+    <h3>`bg`</h3>
+    <ul>
+        <li><strong>Use</strong>: Resume a suspended job in the background.</li>
+        <li><strong>Example</strong>: <code>bg %1</code></li>
+    </ul>
+
+    <h3>`fg`</h3>
+    <ul>
+        <li><strong>Use</strong>: Bring a background job to the foreground.</li>
+        <li><strong>Example</strong>: <code>fg %1</code></li>
+    </ul>
+
+    <h3>`jobs`</h3>
+    <ul>
+        <li><strong>Use</strong>: List all jobs running in the background.</li>
+        <li><strong>Example</strong>: <code>jobs</code></li>
+    </ul>
+
+    <hr>
+
+    <h2 id="package-management">Package Management</h2>
+
+    <h3>Debian/Ubuntu (APT)</h3>
+    <ul>
+        <li><strong>`apt-get install`</strong>: Install a package.</li>
+        <li><strong>`apt-get remove`</strong>: Remove a package.</li>
+        <li><strong>`apt-get update`</strong>: Update package index.</li>
+        <li><strong>`apt-get upgrade`</strong>: Upgrade all installed packages.</li>
+    </ul>
+
+    <h3>RedHat/CentOS/Fedora (YUM)</h3>
+    <ul>
+        <li><strong>`yum install`</strong>: Install a package.</li>
+        <li><strong>`yum remove`</strong>: Remove a package.</li>
+        <li><strong>`yum update`</strong>: Update packages.</li>
+    </ul>
+
+    <h3>Arch Linux (Pacman)</h3>
+    <ul>
+        <li><strong>`pacman -S`</strong>: Install a package.</li>
+        <li><strong>`pacman -R`</strong>: Remove a package.</li>
+        <li><strong>`pacman -Syu`</strong>: Synchronize and update all packages.</li>
+    </ul>
+
+    <hr>
+
+    <h2 id="git-commands">Git Commands</h2>
+
+    <h3>`git init`</h3>
+    <ul>
+        <li><strong>Use</strong>: Initialize a new Git repository.</li>
+        <li><strong>Example</strong>: <code>git init</code></li>
+    </ul>
+
+    <h3>`git clone`</h3>
+    <ul>
+        <li><strong>Use</strong>: Clone a repository.</li>
+        <li><strong>Example</strong>: <code>git clone https://github.com/user/repo.git</code></li>
+    </ul>
+
+    <h3>`git status`</h3>
+    <ul>
+        <li><strong>Use</strong>: Show the working tree status.</li>
+        <li><strong>Example</strong>: <code>git status</code></li>
+    </ul>
+
+    <h3>`git add`</h3>
+    <ul>
+        <li><strong>Use</strong>: Add file contents to the index.</li>
+        <li><strong>Example</strong>: <code>git add .</code> (Add all changes)</li>
+    </ul>
+
+    <h3>`git commit`</h3>
+    <ul>
+        <li><strong>Use</strong>: Record changes to the repository.</li>
+        <li><strong>Example</strong>: <code>git commit -m "Commit message"</code></li>
+    </ul>
+
+    <h3>`git push`</h3>
+    <ul>
+        <li><strong>Use</strong>: Update remote refs along with associated objects.</li>
+        <li><strong>Example</strong>: <code>git push origin main</code></li>
+    </ul>
+
+    <h3>`git pull`</h3>
+    <ul>
+        <li><strong>Use</strong>: Fetch from and integrate with another repository or a local branch.</li>
+        <li><strong>Example</strong>: <code>git pull origin main</code></li>
+    </ul>
+
+    <h3>`git merge`</h3>
+    <ul>
+        <li><strong>Use</strong>: Join two or more development histories together.</li>
+        <li><strong>Example</strong>: <code>git merge feature-branch</code></li>
+    </ul>
+
+    <h3>`git branch`</h3>
+    <ul>
+        <li><strong>Use</strong>: List, create, or delete branches.</li>
+        <li><strong>Example</strong>: <code>git branch</code> (List branches)</li>
+    </ul>
+
+    <h3>`git checkout`</h3>
+    <ul>
+        <li><strong>Use</strong>: Switch branches or restore working tree files.</li>
+        <li><strong>Example</strong>: <code>git checkout -b new-branch</code> (Create and switch to a new branch)</li>
+    </ul>
+
+    <hr>
+
+    <h2 id="miscellaneous">Miscellaneous</h2>
+
+    <h3>`echo`</h3>
+    <ul>
+        <li><strong>Use</strong>: Display a line of text.</li>
+        <li><strong>Example</strong>: <code>echo "Hello, World!"</code></li>
+    </ul>
+
+    <h3>`date`</h3>
+    <ul>
+        <li><strong>Use</strong>: Display or set the system date and time.</li>
+        <li><strong>Example</strong>: <code>date</code></li>
+    </ul>
+
+    <h3>`whoami`</h3>
+    <ul>
+        <li><strong>Use</strong>: Print the current user name.</li>
+        <li><strong>Example</strong>: <code>whoami</code></li>
+    </ul>
+
+    <h3>`man`</h3>
+    <ul>
+        <li><strong>Use</strong>: Display the manual for a command.</li>
+        <li><strong>Example</strong>: <code>man ls</code> (Display the manual for the <code>ls</code> command)</li>
+    </ul>
+
+    <h3>`uptime`</h3>
+    <ul>
+        <li><strong>Use</strong>: Tell how long the system has been running.</li>
+        <li><strong>Example</strong>: <code>uptime</code></li>
+    </ul>
+
+    <h3>`history`</h3>
+    <ul>
+        <li><strong>Use</strong>: Show the command history.</li>
+        <li><strong>Example</strong>: <code>history</code></li>
+    </ul>
+
+    <hr>
+
+    <h2 id="conclusion">Conclusion</h2>
+    <p>These commands are just the tip of the iceberg when it comes to Linux's powerful command-line interface. Mastering these basics will provide a solid foundation for further exploration and advanced usage.</p>
+
+    <hr>
+
+<h2 id="authors">Authors</h2>
+<ul>
+    <li><a href="https://github.com/sbidwaibing">@sbidwai</a></li>
+</ul>
+<p>Please feel free to contribute</p>
+
+<hr>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+<ul>
+    <li><a href="https://linuxcommand.org/lc3_man_page_index.php">Official Doc</a></li>
+</ul>
+
+<hr>
+
+<h2 id="license">License</h2>
+<p><a href="https://choosealicense.com/licenses/mit/">MIT License</a><br/>
+<a href="https://opensource.org/license/mit">Open Source Initiative</a></p>
+
+<p align="justify">Copyright (c) 2024 SukrutB.</p>
+
+<p align="justify">Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p align="justify">The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+
+<p align="justify">THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</p>
+
+
+</body>
+</html>
